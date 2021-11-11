@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Forms</title>
+</head>
+
+
+<body>
+    <!-- Header -->
+    <header class="speaker-form-header"> 
+        <h1>Fromulario para Speakers</h1>
+        <p>Que queres contar en nuestra conferencia?</p>
+    </header>
+    <!-- FIN Header -->
+
+    <!-- Form --> 
+    <!--Action = La URL que procesa el form-->
+    <!-- Method = como queremos enviar esta info POST/GET enviar - internamente por el servidor/ envia a travez de la url-->
+
+    <form action="/SERVER/" method="POST" class="speaker-form">
+        
+        <div class="form-row">
+            <!--INPUTS siempre de a dos etiquetas = Primero LABEL-->
+            <label for="full-name">Nombre</label> <!--Personas con discapacidad les lee eso-->
+            <input type="text" name="nombre" id="full-name"> <!--ID y FOR mismo nombre--> <!--name: lo que busca el servidor-->
+        
+            <label for="email"></label>
+            <input type="email"
+                name="email"
+                id="email" 
+                placeholder="ejemplo@emamail.com"
+                required
+            >
+
+            <!--button-->
+            <fieldset class="legacy-form-row">
+
+                <legend>Tipo de charla</legend> <!--Titulo para los campos-->
+
+                <label class="radio-label" for="talk-type">Escenario</label>
+                <input type="radio" 
+                    name="talk" 
+                    id="talk-type"
+                >
+
+              
+                <label class="radio-label" for="talk">Workshop</label>
+                <input type="radio" 
+                name="talk" 
+                id="talk"
+                checked   
+                >  <!--Te lo marca-->
+
+            </fieldset>
+
+            <label for="t-shirt">T-shirt size</label>
+
+            <select name="t-shirt" id="t-shirt">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+
+
+            <!--Text areas-->
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" 
+            id="mensaje">Describe tu charla</textarea>
+            <!-- cols="30" rows="10" tamanos-->
+        
+            </textarea>
+
+
+            <!--Checl Box-->
+            
+            <label for="check">Estoy disponible</label>
+            <input type="checkbox" name="checkbox" id="check">
+            
+            <div class="button">
+                <button type="submit">Enviar</button>
+            </div>
+        
+        </div>
+
+
+
+
+    </form>
+    <!-- FIN Form -->
+
+
+
+
+</body>
+</html>
